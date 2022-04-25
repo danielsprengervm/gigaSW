@@ -2,6 +2,7 @@
 
 while true; do
 	clear
+	bash resetPins.sh
 	errors=""
 	echo "---------- GIGA VMBOX 5 TOTEM ----------"
 	echo ""
@@ -109,5 +110,6 @@ while true; do
 		echo "Testes reprovados: ${errors}"
 	fi
 	echo "Pressione ENTER para fechar o report"
+	bash resetPins.sh
 	read -p "" dummy
 done
