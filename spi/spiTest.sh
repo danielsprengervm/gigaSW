@@ -6,13 +6,11 @@
 raspi-gpio set 5 op
 raspi-gpio set 5 dl
 
-spi_good="Ok"
 spi_rx=" "
 echo "Testando a comunicação SPI..."
-spi_rx=$(python spi/spiComm.py)
-if [[ "${spi_rx}" != "${spi_good}" ]]; then
+spi_rx=$(python /home/pi/gigaSW/spi/spiComm.py)
+if [[ "${spi_rx}" != "Ok" ]]; then
 	echo "Falha na comunicação SPI"
-	echo "$spi_rx"
 	exit 1
 fi
 
@@ -25,14 +23,13 @@ sleep 1
 
 spi_ngood="Nok"
 spi_rx=" "
-spi_rx=$(python spi/spiComm.py)
+spi_rx=$(python /home/pi/gigaSW/spi/spiComm.py)
 # nresetUc
 raspi-gpio set 4 ip
 raspi-gpio set 4 pn
 sleep 1
-if [[ "${spi_rx}" != "${spi_ngood}" ]]; then
+if [[ "${spi_rx}" != "Nok" ]]; then
 	echo "Falha no reset do ATM"
-	echo "$spi_rx"
 	exit 2
 fi
 

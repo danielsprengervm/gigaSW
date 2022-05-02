@@ -8,7 +8,7 @@ raspi-gpio set 5 dl
 adc_good="Ok"
 adc_rx=" "
 echo "Testando a leitura do ADC"
-adc_rx=$(python spi/testAdc.py)
+adc_rx=$(python /home/pi/gigaSW/spi/testAdc.py)
 if [[ "${adc_rx}" != "${adc_good}" ]]; then
 	echo "Falha no ADC"
 	exit 1

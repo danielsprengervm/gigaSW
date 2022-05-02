@@ -32,7 +32,7 @@ fi
 
 write_good="Done"
 write_rx=" "
-write_rx=$(pymcuprog write -t uart -u /dev/ttyAMA0 -d atmega3208 -f updi/box5_fw100.hex)
+write_rx=$(pymcuprog write -t uart -u /dev/ttyAMA0 -d atmega3208 -f /home/pi/gigaSW/updi/box5_fw100.hex)
 if [[ "${write_rx}" != *"${write_good}"* ]]; then
 	sleep 1
 	echo "Falha na gravacao do firmware"

@@ -23,3 +23,10 @@ sudo apt-get install i2c-tools libi2c-dev python-smbus
 
 echo "dtparam=spi=on" >> /boot/config.txt
 
+sudo apt install xterm
+
+echo "[Desktop Entry]" > /etc/xdg/autostart/giga.desktop
+echo "Name=gigaBox5Totem" >> /etc/xdg/autostart/giga.desktop
+echo "Exec=xterm -fullscreen -e 'sudo bash /home/pi/gigaSW/gigaLauncher.sh'" >> /etc/xdg/autostart/giga.desktop
+
+

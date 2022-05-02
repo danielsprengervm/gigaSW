@@ -33,9 +33,9 @@ fi
 echo "SW1 ok"
 
 #Teste SW2
-raspi-gpio set 7 ip
-raspi-gpio set 7 pd
-rx_gpio=$(raspi-gpio get 7)
+raspi-gpio set 24 ip
+raspi-gpio set 24 pu
+rx_gpio=$(raspi-gpio get 24)
 if [[ "${rx_gpio}" != *"level=0"* ]]; then
 	echo "Falha SW2"
 	exit 3
@@ -45,9 +45,9 @@ echo "Pressione SW2"
 success=0
 startTime=$(date +%s)
 now=$(date +%s)
-while [ $((now)) -le $((startTime+10)) ]]
+while [[ $((now)) -le $((startTime+10)) ]]
 do
-	rx_gpio=$(raspi-gpio get 7)
+	rx_gpio=$(raspi-gpio get 24)
 	if [[ "${rx_gpio}" == *"level=1"* ]]; then
 		success=1
 		break
@@ -57,6 +57,7 @@ done
 if [ $success -eq 0 ]; then
 	echo "Falha SW2"
 	exit 4
+fi
 echo "SW2 ok"
 
 exit 0

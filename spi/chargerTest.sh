@@ -7,7 +7,7 @@ raspi-gpio set 5 op
 raspi-gpio set 5 dl
 spi_rx=" "
 echo "Testando a leitura do carregador"
-spi_rx=$(python spi/getChg.py)
+spi_rx=$(python /home/pi/gigaSW/spi/getChg.py)
 if [[ "${spi_rx}" != "Ok" ]]; then
 	echo "Falha na leitura do carregador"
 	exit 1
