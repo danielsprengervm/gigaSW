@@ -1,2 +1,2 @@
 #!/bin/bash 
-python /home/pi/gigaSW/rs485/rxLoop.py &
+python ${GIGA_SW_PATH}/rs485/rxLoop.py &

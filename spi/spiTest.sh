@@ -8,7 +8,7 @@ raspi-gpio set 5 dl
 
 spi_rx=" "
 echo "Testando a comunicação SPI..."
-spi_rx=$(python /home/pi/gigaSW/spi/spiComm.py)
+spi_rx=$(python ${GIGA_SW_PATH}/spi/spiComm.py)
 if [[ "${spi_rx}" != "Ok" ]]; then
 	echo "Falha na comunicação SPI"
 	exit 1
@@ -23,7 +23,7 @@ sleep 1
 
 spi_ngood="Nok"
 spi_rx=" "
-spi_rx=$(python /home/pi/gigaSW/spi/spiComm.py)
+spi_rx=$(python ${GIGA_SW_PATH}/spi/spiComm.py)
 # nresetUc
 raspi-gpio set 4 ip
 raspi-gpio set 4 pn

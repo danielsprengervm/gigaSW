@@ -21,7 +21,7 @@ fi
 success=0
 startTime=$(date +%s)
 now=$(date +%s)
-python /home/pi/gigaSW/power/setWd1000.py
+python ${GIGA_SW_PATH}/power/setWd1000.py
 while [[ $((now)) -le $((startTime+2)) ]]
 do
 	rx=$(raspi-gpio get 24)

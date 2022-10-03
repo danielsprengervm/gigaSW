@@ -7,10 +7,11 @@
 # - - - - - - -
 
 echo "Gravando FW do ATM..."
-bash /home/pi/gigaSW/spi/resetUc.sh
-python /home/pi/gigaSW/spi/ATMprogrammer.py app100.bin
+bash ${GIGA_SW_PATH}/spi/resetUc.sh
+python ${GIGA_SW_PATH}/spi/ATMprogrammer.py ${GIGA_SW_PATH}/spi/app100.bin
 if [[ $? -ne 0 ]]; then
 	echo "Erro na gravacao do Firmware"
 	exit 1
+fi
 echo "Gravacao Finalizada com sucesso"
 exit 0
