@@ -12,7 +12,6 @@ echo "dtoverlay=pi3-miniuart-bt" >> /boot/config.txt
 systemctl stop serial-getty@ttyS0.service
 systemctl disable serial-getty@ttyS0.service
 sed -i 's/console=serial0,115200 //g' /boot/cmdline.txt
-pip install pymcuprog
 
 echo "i2c-dev" >> /etc/modules
 echo "i2c-bcm2708" >> /etc/modules

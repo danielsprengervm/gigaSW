@@ -24,4 +24,3 @@ while True:
 	if rx == BOOK_CMD:
 		sleep(0.01)
 		port.write(BOOK_RX)
-		print("rx cmd")

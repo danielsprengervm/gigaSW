@@ -33,6 +33,5 @@ if [[ "${spi_rx}" != "Nok" ]]; then
 	exit 2
 fi
 
-echo "Teste SPI ok"
 exit 0
 
