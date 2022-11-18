@@ -12,7 +12,7 @@ DE_485 = 23
 gpio.setwarnings(False)
 port=serial.Serial()
 port.baudrate=115200
-port.timeout=1
+port.timeout=2
 
 gpio.setmode(gpio.BCM)
 
