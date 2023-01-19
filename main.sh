@@ -11,7 +11,7 @@ while true; do
 	bash ${GIGA_SW_PATH}/resetPins.sh
 	echo "---------- GIGA VMBOX 5 TOTEM ----------"
 	echo ""
-	echo "Versao giga = 1.0 | Versao ATM = 1.1"
+	echo "Versao giga = 2.0 | Versao ATM = 1.5"
 	echo ""
 	echo "Pressione o botão para iniciar os testes"
 	sleep 0.5

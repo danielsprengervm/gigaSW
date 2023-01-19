@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# NAO E MAIS UTILIZADO!! GRAVACAO DO FW NA GIGA E FEITO SOMENTE VIA SPI
+
 # Teste da interface UPDI, pinga o dispositivo, apaga a memoria,
 # grava flash e fuse do reset
 # retorna 0 se houver tudo bem e outro valor dependendo do erro que ocorreu 

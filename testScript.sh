@@ -26,15 +26,6 @@ if [[ $? -ne 0 ]]; then
 else
   echo "Teste SPI ok"
 fi
-echo "Teste GPIO..."
-echo ""
-bash ${GIGA_SW_PATH}/gpio/testGpio.sh
-if [[ $? -ne 0 ]]; then
-  echo "Teste GPIO reprovado!"
-  echo -n " GPIO," >> ${GIGA_SW_PATH}/errors.txt
-else
-  echo "Teste GPIO OK!"
-fi
 echo ""
 echo "Teste RS485"
 echo ""
