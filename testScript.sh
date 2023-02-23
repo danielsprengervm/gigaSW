@@ -36,10 +36,10 @@ if [[ $? -ne 0 ]]; then
 else
   echo "Teste RS485 ok!"
 fi
-sleep 1
 echo ""
 echo "Teste Power"
 echo ""
+sleep 4
 bash ${GIGA_SW_PATH}/power/testPower.sh
 if [[ $? -ne 0 ]]; then
   echo "Teste Power reprovado!"
